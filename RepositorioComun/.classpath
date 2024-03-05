@@ -9,6 +9,7 @@
 	<classpathentry kind="src" path="FalcaoBejines"/>
 	<classpathentry kind="src" path="BullonGonzalez"/>
 	<classpathentry kind="src" path="VargasGarcia"/>
+	<classpathentry kind="src" path="RomeroBerro"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
