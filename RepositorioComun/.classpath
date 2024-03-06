@@ -6,12 +6,19 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
+	<classpathentry kind="src" path="prietoJurado"/>
+=======
 	<classpathentry kind="src" path="FalcaoBejines"/>
 	<classpathentry kind="src" path="BullonGonzalez"/>
 	<classpathentry kind="src" path="VargasGarcia"/>
 	<classpathentry kind="src" path="RomeroBerro"/>
 	<classpathentry kind="src" path="LopezMartinez"/>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="HernandezMolina"/>
+=======
+>>>>>>> branch 'RepositorioComun' of https://github.com/jmorgar615p/EDCantillana1DAM.git
+>>>>>>> branch 'RepositorioComun' of https://github.com/jmorgar615p/EDCantillana1DAM.git
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
