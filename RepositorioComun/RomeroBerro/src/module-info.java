@@ -4,3 +4,5 @@
 /**
  * 
  */
+module RomeroBero {
+}
