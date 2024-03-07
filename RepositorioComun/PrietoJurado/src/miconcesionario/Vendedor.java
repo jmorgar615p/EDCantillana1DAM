@@ -3,7 +3,7 @@ package src.miconcesionario;
 /**
  * Clase que representa a un vendedor de un concesionario.
  *
- * @author Juan Pablo González
+ * @author Rubén Prieto Jurado
  */
 public class Vendedor {
 	//Campos
