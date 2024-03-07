@@ -8,15 +8,37 @@ import src.miconcesionario.MarcaCoche;
 import src.miconcesionario.MiConcesionario;
 import src.miconcesionario.Vendedor;
 
-
+/**
+ * Clase de prueba para el concesionario.
+ *
+ * @author Rubén Prieto Jurado
+ */
 public class ConcesionarioTest extends TestCase {
+		/**
+	     * Objeto de prueba para la marca de coches.
+	     */
 		private MarcaCoche c1;
+		/**
+	     * Objeto de prueba para la marca de coches.
+	     */
 		private MarcaCoche c2;
+		/**
+	     * Objeto de prueba para el vendedor.
+	     */
 		private Vendedor v1;
+		/**
+	     * Objeto de prueba para el vendedor.
+	     */
 		private Vendedor v2;
+		/**
+	     * Objeto de prueba para el concesionario.
+	     */
 		private MiConcesionario mc;
 
 	//Prueba Constructor
+		/**
+	     * Prueba del constructor de MiConcesionario.
+	     */
 	public void testMiConcesionario() {
 		MiConcesionario mc = new MiConcesionario("Prueba");
 		
@@ -25,7 +47,9 @@ public class ConcesionarioTest extends TestCase {
 		assertTrue(mc.marca instanceof ArrayList);
 		assertTrue(mc.vendedor instanceof ArrayList);
 }
-	
+	/**
+     * Configuración inicial de los objetos de prueba.
+     */
 	public void configuracion() {
 		c1 = new MarcaCoche("Audi");
 		c2 = new MarcaCoche("Mercedes Benz");
@@ -37,6 +61,9 @@ public class ConcesionarioTest extends TestCase {
 		mc = new MiConcesionario("Prueba");
 	}
 	
+	/**
+     * Prueba del método addMarca.
+     */
 	public void testAddMarca() {
 		//Crear objetos de prueba
 		configuracion();
