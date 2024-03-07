@@ -1,4 +1,4 @@
-package org.concesionario.taller;
+package src.miconcesionario;
 
 public class Vendedor {
 	//Campos

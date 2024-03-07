@@ -1,9 +1,12 @@
-package org.concesionario.taller;
+package test.miconcesionario;
 
 import java.util.ArrayList;
 
-import junit.framework.TestCase;
 
+import junit.framework.TestCase;
+import src.miconcesionario.MarcaCoche;
+import src.miconcesionario.MiConcesionario;
+import src.miconcesionario.Vendedor;
 
 
 public class ConcesionarioTest extends TestCase {

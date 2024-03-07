@@ -1,9 +1,9 @@
-package org.concesionario.taller;
+package src.miconcesionario;
 
 public class MarcaCoche {
 	
-	String nombremarca;
-	String vendedor;
+	public String nombremarca;
+	public String vendedor;
 	Vendedor Vendedor;
 	
 	public MarcaCoche(String string) {

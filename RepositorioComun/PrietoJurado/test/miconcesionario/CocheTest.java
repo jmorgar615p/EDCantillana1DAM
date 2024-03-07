@@ -1,6 +1,8 @@
-package org.concesionario.taller;
+package test.miconcesionario;
 
 import junit.framework.TestCase;
+import src.miconcesionario.MarcaCoche;
+import src.miconcesionario.Vendedor;
 
 public class CocheTest extends TestCase {
 	public void testCoche() {

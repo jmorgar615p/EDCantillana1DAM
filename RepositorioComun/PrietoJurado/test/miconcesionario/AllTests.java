@@ -1,4 +1,4 @@
-package org.concesionario.taller;
+package test.miconcesionario;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

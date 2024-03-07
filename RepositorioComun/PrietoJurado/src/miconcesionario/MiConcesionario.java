@@ -1,12 +1,12 @@
-package org.concesionario.taller;
+package src.miconcesionario;
 
 import java.util.ArrayList;
 
 public class MiConcesionario {
 
-	String nombre;
-	ArrayList<MarcaCoche> marca;
-	ArrayList<Vendedor> vendedor;
+	public String nombre;
+	public ArrayList<MarcaCoche> marca;
+	public ArrayList<Vendedor> vendedor;
 	
 	public MiConcesionario(String nombre) {
 		this.nombre = nombre;

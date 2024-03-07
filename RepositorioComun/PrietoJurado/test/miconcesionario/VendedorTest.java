@@ -1,6 +1,7 @@
-package org.concesionario.taller;
+package test.miconcesionario;
 
 import junit.framework.TestCase;
+import src.miconcesionario.Vendedor;
 
 public class VendedorTest extends TestCase {
 	public void testVendedor() {
