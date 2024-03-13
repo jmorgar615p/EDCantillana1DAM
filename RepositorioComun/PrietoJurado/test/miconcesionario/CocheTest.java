@@ -27,15 +27,15 @@ public class CocheTest extends TestCase {
 	public void testGetVendedor() {
 		InterfazMarcaCoche c2 = new MarcaCoche("Audi");
 		Interfaz_Vendedor v2 = new Vendedor();
-		v2.setNombre("Javier");
+		v2.setNombre("Javier", v2);
 		
 		//Metodo para decir que esta marca la vende un vendedor concreto
-		c2.setNombre(v2);
+		c2.setNombre(v2, c2);
 		
 		//Conseguir el nombre de la persona que vende esa marca
 		//Vendedor testVendedor = c2.getNombre();
 		//String testName = testVendedor.getNombre();
-		String testName = c2.getNombre().getNombre();
+		String testName = c2.getNombre().getNombre(c2.getNombre());
 		assertEquals("Javier", testName);
 	}
 }

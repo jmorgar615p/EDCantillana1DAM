@@ -7,61 +7,31 @@ package src.miconcesionario;
  *
  * @author Rubén Prieto Jurado
  */
-public class MarcaCoche implements InterfazMarcaCoche {
-	/**
-     * Nombre de la marca del coche.
-     */
-	public String nombremarca;
-	/**
-     * Nombre del vendedor que vende coches de esta marca.
-     */
-	public String vendedor;
-	/**
-     * Objeto que representa al vendedor que vende coches de esta marca.
-     */
-	Interfaz_Vendedor Vendedor;
-	
+public class MarcaCoche extends Superclass_MarcaCoche implements InterfazMarcaCoche {
 	/**
      * Constructor de la clase MarcaCoche.
      *
      * @param nombremarca Nombre de la marca del coche.
      */
 	public MarcaCoche(String string) {
+		super();
 		this.nombremarca = string;
 		this.vendedor = "Vendedor Desconocido";
 	}
-/*
-	public String getNombremarca() {
-		return nombremarca;
-	}
 
-	public void setNombremarca(String nombremarca) {
-		this.nombremarca = nombremarca;
-	}
-
-	public String getVendedor() {
-		return vendedor;
-	}
-*/
-	/**
-     * Establece el objeto que representa al vendedor que vende coches de esta marca.
-     *
-     * @param v2 Objeto que representa al vendedor que vende coches de esta marca.
-     */
-	@Override
 	public void setNombre(Interfaz_Vendedor v2) {
-		this.Vendedor = v2;
+		// TODO Auto-generated method stub
 		
 	}
-	
-	/**
-     * Devuelve el objeto que representa al vendedor que vende coches de esta marca.
-     *
-     * @return Objeto que representa al vendedor que vende coches de esta marca.
-     */
-	@Override
+
 	public Interfaz_Vendedor getNombre() {
-		return this.Vendedor;
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setNombre(Interfaz_Vendedor v2, InterfazMarcaCoche c2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

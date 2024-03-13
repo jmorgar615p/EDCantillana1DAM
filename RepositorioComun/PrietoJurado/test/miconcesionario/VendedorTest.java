@@ -14,7 +14,7 @@ public class VendedorTest extends TestCase {
 	  */
 	public void testVendedor() {
 		Interfaz_Vendedor v1 = new Vendedor();
-		assertEquals("Nombre Desconocido", v1.getNombre());
+		assertEquals("Nombre Desconocido", v1.getNombre(v1));
 		assertEquals(3, v1.getCochesVendidos());
 	}
 
@@ -23,8 +23,8 @@ public class VendedorTest extends TestCase {
 	  */
 	public void testSetNombre() {
 		Interfaz_Vendedor v2 = new Vendedor();
-		v2.setNombre("Fred");
-		assertEquals("Fred", v2.getNombre());
+		v2.getNombre("Fred");
+		assertEquals("Fred", v2.getNombre(getName()));
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class VendedorTest extends TestCase {
 	  */
 	public void testSetCochesVendidos() {
 		Interfaz_Vendedor v3 = new Vendedor();
-		v3.setCochesVendidos(10);
+		v3.setCochesVendidos(10, v3);
 		assertEquals(10, v3.getCochesVendidos());
 	}
 
@@ -41,8 +41,8 @@ public class VendedorTest extends TestCase {
 	  */
 	public void testToString() {
 		Interfaz_Vendedor v4 = new Vendedor();
-		v4.setNombre("Alfredo Gonzalez");
-		v4.setCochesVendidos(8);
+		v4.setNombre("Alfredo Gonzalez", v4);
+		v4.setCochesVendidos(8, v4);
 		String testString = "Alfredo Gonzalez (8 coches)";
 		assertEquals(testString, v4.toString());
 	}

@@ -19,8 +19,9 @@ public interface InterfazMarcaCoche {
 	 * Establece el objeto que representa al vendedor que vende coches de esta marca.
 	 *
 	 * @param v2 Objeto que representa al vendedor que vende coches de esta marca.
+	 * @param c2 
 	 */
-	void setNombre(Interfaz_Vendedor v2);
+	void setNombre(Interfaz_Vendedor v2, InterfazMarcaCoche c2);
 
 	/**
 	 * Devuelve el objeto que representa al vendedor que vende coches de esta marca.

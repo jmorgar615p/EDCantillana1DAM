@@ -5,11 +5,7 @@ package src.miconcesionario;
  *
  * @author Rubén Prieto Jurado
  */
-public class Vendedor implements Interfaz_Vendedor {
-	//Campos
-	private String nombre;
-	private int cochesVendidos;
-
+public class Vendedor extends Superclass_Vendedor implements Interfaz_Vendedor {
 	//Constructores
 	/**
      * Constructor por defecto.
@@ -17,59 +13,32 @@ public class Vendedor implements Interfaz_Vendedor {
      * Crea un vendedor con nombre "Nombre Desconocido" y 3 coches vendidos.
      */
 	public Vendedor() {
+		super();
 		nombre = "Nombre Desconocido";
 		cochesVendidos = 3;
 	}
-	
-	//Métodos
-	/**
-     * Obtiene el nombre del vendedor.
-     *
-     * @return El nombre del vendedor.
-     */
-	@Override
-	public String getNombre() {
-		return nombre;
-	}
-	
-	/**
-     * Establece el nombre del vendedor.
-     *
-     * @param nombre El nuevo nombre del vendedor.
-     */
-	@Override
-	public void setNombre(String anyName) {
-		nombre = anyName;
-	}
 
-	/**
-     * Obtiene el número de coches vendidos por el vendedor.
-     *
-     * @return El número de coches vendidos por el vendedor.
-     */
-	@Override
-	public int getCochesVendidos() {
-		return cochesVendidos;
-	}
-
-	/**
-     * Establece el número de coches vendidos por el vendedor.
-     *
-     * @param cochesVendidos El nuevo número de coches vendidos por el vendedor.
-     */
-	@Override
 	public void setCochesVendidos(int cochesVendidos) {
-		this.cochesVendidos = cochesVendidos;
+		// TODO Auto-generated method stub
+		
 	}
-	
-	/**
-     * Devuelve una representación en cadena del vendedor.
-     *
-     * @return La representación en cadena del vendedor.
-     */
-	@Override
-	public String toString() {
-		return this.getNombre() + " (" + this.getCochesVendidos() + " coches)";
+
+	public void setCochesVendidos(int cochesVendidos, Interfaz_Vendedor v3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setNombre(String anyName, Interfaz_Vendedor v2) {
+		// TODO Auto-generated method stub
+		
+	}
+	public String getNombre(Interfaz_Vendedor interfaz_Vendedor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getNombre(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	}

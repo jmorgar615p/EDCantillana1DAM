@@ -57,8 +57,8 @@ public class ConcesionarioTest extends TestCase {
 		c2 = new MarcaCoche("Mercedes Benz");
 		v1 = new Vendedor();
 		v2 = new Vendedor();
-		v1.setNombre("Alfredo");
-		v2.setNombre("Javier");
+		v1.setNombre("Alfredo", v1);
+		v2.setNombre("Javier", v1);
 		
 		mc = new MiConcesionario("Prueba");
 	}
