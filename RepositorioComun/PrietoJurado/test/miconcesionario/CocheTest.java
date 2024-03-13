@@ -1,6 +1,8 @@
 package test.miconcesionario;
 
 import junit.framework.TestCase;
+import src.miconcesionario.InterfazMarcaCoche;
+import src.miconcesionario.Interfaz_Vendedor;
 import src.miconcesionario.MarcaCoche;
 import src.miconcesionario.Vendedor;
 
@@ -23,8 +25,8 @@ public class CocheTest extends TestCase {
      * Prueba el método getNombre() para obtener el nombre del vendedor de una marca.
      */
 	public void testGetVendedor() {
-		MarcaCoche c2 = new MarcaCoche("Audi");
-		Vendedor v2 = new Vendedor();
+		InterfazMarcaCoche c2 = new MarcaCoche("Audi");
+		Interfaz_Vendedor v2 = new Vendedor();
 		v2.setNombre("Javier");
 		
 		//Metodo para decir que esta marca la vende un vendedor concreto

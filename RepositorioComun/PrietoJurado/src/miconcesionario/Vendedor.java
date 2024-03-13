@@ -5,7 +5,7 @@ package src.miconcesionario;
  *
  * @author Rubén Prieto Jurado
  */
-public class Vendedor {
+public class Vendedor implements Interfaz_Vendedor {
 	//Campos
 	private String nombre;
 	private int cochesVendidos;
@@ -27,6 +27,7 @@ public class Vendedor {
      *
      * @return El nombre del vendedor.
      */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -36,6 +37,7 @@ public class Vendedor {
      *
      * @param nombre El nuevo nombre del vendedor.
      */
+	@Override
 	public void setNombre(String anyName) {
 		nombre = anyName;
 	}
@@ -45,6 +47,7 @@ public class Vendedor {
      *
      * @return El número de coches vendidos por el vendedor.
      */
+	@Override
 	public int getCochesVendidos() {
 		return cochesVendidos;
 	}
@@ -54,6 +57,7 @@ public class Vendedor {
      *
      * @param cochesVendidos El nuevo número de coches vendidos por el vendedor.
      */
+	@Override
 	public void setCochesVendidos(int cochesVendidos) {
 		this.cochesVendidos = cochesVendidos;
 	}
@@ -63,6 +67,7 @@ public class Vendedor {
      *
      * @return La representación en cadena del vendedor.
      */
+	@Override
 	public String toString() {
 		return this.getNombre() + " (" + this.getCochesVendidos() + " coches)";
 	}

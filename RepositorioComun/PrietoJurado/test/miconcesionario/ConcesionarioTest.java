@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 
 import junit.framework.TestCase;
+import src.miconcesionario.InterfazConcesionario;
+import src.miconcesionario.Interfaz_Vendedor;
 import src.miconcesionario.MarcaCoche;
 import src.miconcesionario.MiConcesionario;
 import src.miconcesionario.Vendedor;
@@ -25,15 +27,15 @@ public class ConcesionarioTest extends TestCase {
 		/**
 	     * Objeto de prueba para el vendedor.
 	     */
-		private Vendedor v1;
+		private Interfaz_Vendedor v1;
 		/**
 	     * Objeto de prueba para el vendedor.
 	     */
-		private Vendedor v2;
+		private Interfaz_Vendedor v2;
 		/**
 	     * Objeto de prueba para el concesionario.
 	     */
-		private MiConcesionario mc;
+		private InterfazConcesionario mc;
 
 	//Prueba Constructor
 		/**

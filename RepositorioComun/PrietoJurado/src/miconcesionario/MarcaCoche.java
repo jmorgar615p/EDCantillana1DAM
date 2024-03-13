@@ -7,7 +7,7 @@ package src.miconcesionario;
  *
  * @author Rubén Prieto Jurado
  */
-public class MarcaCoche {
+public class MarcaCoche implements InterfazMarcaCoche {
 	/**
      * Nombre de la marca del coche.
      */
@@ -19,7 +19,7 @@ public class MarcaCoche {
 	/**
      * Objeto que representa al vendedor que vende coches de esta marca.
      */
-	Vendedor Vendedor;
+	Interfaz_Vendedor Vendedor;
 	
 	/**
      * Constructor de la clase MarcaCoche.
@@ -48,7 +48,8 @@ public class MarcaCoche {
      *
      * @param v2 Objeto que representa al vendedor que vende coches de esta marca.
      */
-	public void setNombre(Vendedor v2) {
+	@Override
+	public void setNombre(Interfaz_Vendedor v2) {
 		this.Vendedor = v2;
 		
 	}
@@ -58,7 +59,8 @@ public class MarcaCoche {
      *
      * @return Objeto que representa al vendedor que vende coches de esta marca.
      */
-	public Vendedor getNombre() {
+	@Override
+	public Interfaz_Vendedor getNombre() {
 		return this.Vendedor;
 	}
 

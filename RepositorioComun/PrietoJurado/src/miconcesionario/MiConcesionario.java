@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Clase que representa un concesionario de coches.
  */
-public class MiConcesionario {
+public class MiConcesionario implements InterfazConcesionario {
 
 	/**
      * Nombre del concesionario.
@@ -38,6 +38,7 @@ public class MiConcesionario {
      * Obtiene la lista de marcas de coches disponibles en el concesionario.
      * @return Lista de marcas de coches.
      */
+	@Override
 	public ArrayList<MarcaCoche> getMarca() {
 		return marca;
 	}
@@ -50,6 +51,7 @@ public class MiConcesionario {
      * Añade una marca de coches al concesionario.
      * @param c1 Marca de coches a añadir.
      */
+	@Override
 	public void addMarca(MarcaCoche c1) {
 		this.marca.add(c1);
 		
@@ -59,7 +61,8 @@ public class MiConcesionario {
      * Elimina una marca de coches del concesionario.
      * @param c1 Marca de coches a eliminar.
      */
-	public void removeMarca(MarcaCoche c1) {
+	@Override
+	public void removeMarca(InterfazMarcaCoche c1) {
 		this.marca.remove(c1);
 		
 	}
