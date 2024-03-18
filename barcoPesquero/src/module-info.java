@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module barcoPesquero {
+	requires junit;
+}
