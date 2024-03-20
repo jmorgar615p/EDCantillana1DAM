@@ -1,6 +1,7 @@
-package org.restaurante;
+package pruebas.org.restaurante;
 
 import junit.framework.TestCase;
+import src.org.restaurante.Restaurante;
 
 public class RestauranteTest extends TestCase {
 	

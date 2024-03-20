@@ -2,7 +2,7 @@
 /**
  * Define el paquete al que pertenece la clase.
  */
-package org.restaurante;
+package src.org.restaurante;
 
 /**
  * Declaración de la clase pública llamada Plato.
@@ -14,6 +14,7 @@ public class Plato {
 	 */
 	public String nombrePlato;
 	public String vendedor;
+	public int maximosPlatos;
 	
 	/**
 	 *  Método que inicializa el nombre del plato y establece el vendedor como "Vendedor desconocido".
@@ -47,4 +48,23 @@ public class Plato {
 	public String getVendedor() {
 		return vendedor;
 	}
+	
+	/**
+	 * Metodo para obtener el numero maximo de platos
+	 * @return
+	 */
+	public int getMaximosPlatos() {
+		return maximosPlatos;
+		
+	}
+	
+	/**
+	 * Metodo para establecer el numero maximo de platos
+	 * @param maximosPlatos
+	 */
+	public void setMaximosPlatos (int maximosPlatos) {
+		this.maximosPlatos=maximosPlatos;
+	}
+	
+
 }

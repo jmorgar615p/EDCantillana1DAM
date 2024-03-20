@@ -1,4 +1,4 @@
-package org.restaurante;
+package src.org.restaurante;
 
 import java.util.ArrayList;
 import java.util.List;
