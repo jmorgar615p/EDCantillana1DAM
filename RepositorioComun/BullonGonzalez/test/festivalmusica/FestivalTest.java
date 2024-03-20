@@ -4,14 +4,42 @@ import java.util.ArrayList;
 
 import junit.framework.TestCase;
 
+/**
+ * Clase que se encarga de los tests de la clase Festival.
+ * @author Joaquin Bullon Gonzalez
+ * @version 1.0 19/03/2024
+ */
 public class FestivalTest extends TestCase {
 	
+	/**
+	 * Variable de la clase FestivalTest
+	 * e1 - almacena una entrada.
+	 */
 	private Entrada e1;
+	/**
+	 * Variable de la clase FestivalTest
+	 * e2 - almacena una entrada.
+	 */
 	private Entrada e2;
+	/**
+	 * Variable de la clase FestivalTest
+	 * a1 - almacena un artista.
+	 */
 	private Artista a1;
+	/**
+	 * Variable de la clase FestivalTest
+	 * a2 - almacena un artista.
+	 */
 	private Artista a2;
+	/**
+	 * Variable de la clase FestivalTest
+	 * f - almacena un festival.
+	 */
 	private Festival f;
 
+	/**
+	 * Metodo que prueba la creacion de un festival con nombre Benidorm.
+	 */
 	public void testFestival() {
 		Festival f1 = new Festival("Benidorm");
 		
@@ -20,6 +48,9 @@ public class FestivalTest extends TestCase {
 		assertTrue(f1.artistas instanceof ArrayList);
 	}
 	
+	/**
+	 * Metodo que le proporciona valores a las variables de la clase.
+	 */
 	public void configuracionPrueba() {
 		e1 = new Entrada("Simple",5);
 		e2 = new Entrada("Doble", 6);
@@ -29,6 +60,9 @@ public class FestivalTest extends TestCase {
 		f = new Festival("Eurovision");
 	}
 	
+	/**
+	 * Metodo que prueba el metodo addEntrada().
+	 */
 	public void testAddEntrada() {
 		
 		configuracionPrueba();
@@ -50,6 +84,9 @@ public class FestivalTest extends TestCase {
 		assertEquals(0, f.getEntradas().size());
 	}
 	
+	/**
+	 * Metodo que añade las entradas y artistas a sus correspondientes arrays dentro del festival f.
+	 */
 	public void addObjetos() {
 		f.addEntrada(e1);
 		f.addEntrada(e2);
@@ -57,6 +94,9 @@ public class FestivalTest extends TestCase {
 		f.addArtista(a2);
 	}
 	
+	/**
+	 * Metodo que prueba los metodos asignar() y desasignar().
+	 */
 	public void testAsignar() {
 		
 		configuracionPrueba();
