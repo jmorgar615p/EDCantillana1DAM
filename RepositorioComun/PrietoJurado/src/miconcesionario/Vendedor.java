@@ -1,73 +1,75 @@
 package src.miconcesionario;
 
 /**
- * Clase que representa a un vendedor en un concesionario de coches.
+ * Clase que representa a un vendedor de un concesionario.
+ *
+ * @author Rubén Prieto Jurado
  */
-public class Vendedor {
+public class Vendedor implements Interfaz_Vendedor {
+	//Campos
+	private String nombre;
+	private int cochesVendidos;
 
-    /**
-     * Nombre del vendedor.
+	//Constructores
+	/**
+     * Constructor por defecto.
+     *
+     * Crea un vendedor con nombre "Nombre Desconocido" y 3 coches vendidos.
      */
-    private String nombre;
-
-    /**
-     * Número de coches vendidos por el vendedor.
-     */
-    private int cochesVendidos;
-
-    /**
-     * Constructor de la clase Vendedor sin parámetros. Establece el nombre en
-     * "Nombre Desconocido" y el número de coches vendidos en 3.
-     */
-    public Vendedor() {
-        nombre = "Nombre Desconocido";
-        cochesVendidos = 3;
-    }
-
-    /**
+	public Vendedor() {
+		nombre = "Nombre Desconocido";
+		cochesVendidos = 3;
+	}
+	
+	//Métodos
+	/**
      * Obtiene el nombre del vendedor.
      *
-     * @return Nombre del vendedor.
+     * @return El nombre del vendedor.
      */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
+	@Override
+	public String getNombre() {
+		return nombre;
+	}
+	
+	/**
      * Establece el nombre del vendedor.
      *
-     * @param anyName Nombre del vendedor.
+     * @param nombre El nuevo nombre del vendedor.
      */
-    public void setNombre(String anyName) {
-        nombre = anyName;
-    }
+	@Override
+	public void setNombre(String anyName) {
+		nombre = anyName;
+	}
 
-    /**
+	/**
      * Obtiene el número de coches vendidos por el vendedor.
      *
-     * @return Número de coches vendidos.
+     * @return El número de coches vendidos por el vendedor.
      */
-    public int getCochesVendidos() {
-        return cochesVendidos;
-    }
+	@Override
+	public int getCochesVendidos() {
+		return cochesVendidos;
+	}
 
-    /**
+	/**
      * Establece el número de coches vendidos por el vendedor.
      *
-     * @param cochesVendidos Número de coches vendidos.
+     * @param cochesVendidos El nuevo número de coches vendidos por el vendedor.
      */
-    public void setCochesVendidos(int cochesVendidos) {
-        this.cochesVendidos = cochesVendidos;
-    }
-
-    /**
-     * Devuelve una representación en forma de cadena del vendedor.
+	@Override
+	public void setCochesVendidos(int cochesVendidos) {
+		this.cochesVendidos = cochesVendidos;
+	}
+	
+	/**
+     * Devuelve una representación en cadena del vendedor.
      *
-     * @return Cadena con la representación del vendedor.
+     * @return La representación en cadena del vendedor.
      */
-    @Override
-    public String toString() {
-    	return this.getNombre() + " (" + this.getCochesVendidos() + " coches)";
-    }
+	@Override
+	public String toString() {
+		return this.getNombre() + " (" + this.getCochesVendidos() + " coches)";
+	}
 
 	}

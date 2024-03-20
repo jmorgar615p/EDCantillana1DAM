@@ -3,12 +3,17 @@ package programatelevision;
 import junit.framework.TestCase;
 
 public class TemasTest extends TestCase {
+	/**
+	 * Pruebo a crear un objeto de la clase temas
+	 * */
 	public void testTemas() {
 		Temas g1 = new Temas("GG","Pepe");
 		assertEquals("GG", g1.nombre);
 		assertEquals("Pepe", g1.autor);
 	}
-	
+	/**
+	 * pruebo seters
+	 * */
 	public void testSetNombre() {
 		Temas g2 = new Temas("Drama","Manue");
 		g2.setNombre("Cocina");
@@ -16,7 +21,7 @@ public class TemasTest extends TestCase {
 	}
 	
 	public void testSetAuthor() {
-		Temas g3 = new Temas("Drama","Marcelo");
+		InterfazAutores g3 = new Temas("Drama","Marcelo");
 		g3.setAuthor("Cocina");
 		assertEquals("Cocina", g3.getAuthor());
 	}

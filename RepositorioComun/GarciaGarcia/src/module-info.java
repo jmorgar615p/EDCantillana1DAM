@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module DesarolloGuiado {
-	requires junit;
-}

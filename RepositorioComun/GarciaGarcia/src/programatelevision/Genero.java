@@ -1,10 +1,14 @@
 package programatelevision;
 
 public class Genero {
-
+/*
+ *atributos
+ * */
 	public String nombre;
 	public int maximoTemas;
-
+/**
+ * Creo un objeto de tipo genero con los atributos nombres y maximoTemas
+ * */
 	public Genero(String nombre, int maximoTemas) {
 		this.nombre = nombre;
 		this.maximoTemas = maximoTemas;

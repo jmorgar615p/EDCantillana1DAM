@@ -3,12 +3,17 @@ package programatelevision;
 import junit.framework.TestCase;
 
 public class ProgrmasTVTest extends TestCase {
+	/**
+	 * Pruebo a crear un objeto de la clase progrmas
+	 * */
 	public void testTemas() {
 		ProgrmasTVT g1 = new ProgrmasTVT("GG","Tertulia");
 		assertEquals("GG", g1.tema);
 		assertEquals("Tertulia", g1.genero);
 	}
-	
+	/**
+	 * pruebo seters
+	 * */
 	public void testSetTema() {
 		ProgrmasTVT g2 = new ProgrmasTVT("Tertulia", null);
 		g2.setTema("Tertulia");

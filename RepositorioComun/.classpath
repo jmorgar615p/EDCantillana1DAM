@@ -3,6 +3,9 @@
 	<classpathentry kind="src" path="AmoresPareja"/>
 	<classpathentry kind="src" path="PozoMartin"/>
 	<classpathentry kind="src" path="PrietoJurado"/>
+	<classpathentry kind="src" path="CabelloLopez"/>
+	<classpathentry kind="src" path="CarrizosaRuiz"/>
+	<classpathentry kind="src" path="GarciaVelazquez"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3">
 		<attributes>
 			<attribute name="module" value="true"/>
