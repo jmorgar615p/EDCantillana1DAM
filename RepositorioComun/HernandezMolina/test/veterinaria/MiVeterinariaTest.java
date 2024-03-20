@@ -9,7 +9,7 @@ import junit.framework.TestCase;
  * @version 1.0
  */
 
-public class MiVeterinariaTest extends TestCase {
+public class MiVeterinariaTest extends TestCase implements anadirAnimal {
 	
 	/**
 	 * Definicion de los atributos
@@ -18,7 +18,7 @@ public class MiVeterinariaTest extends TestCase {
 	private Animal a2;
 	private Trabajador t1;
 	private Trabajador t2;
-	private MiVeterinaria c1;
+	private MiVeterinaria v1;
 
 	/**
 	 * test miveterinaria
@@ -46,32 +46,33 @@ public class MiVeterinariaTest extends TestCase {
 		t1.setNombre("Pepe");
 		t2.setNombre("Pepa");
 		
-		c1 = new MiVeterinaria("Veterinaria");
+		v1 = new MiVeterinaria("Veterinaria");
 	}
 	
 	/**
 	 * test para añadir animal
 	 */
+	@Override
 	public void testAnadirAnimal() {
 		//Creamos el objeto
 		confi();
 		
 		//Test inicializado a 0
-		assertEquals(0, c1.getAnimal().size());
+		assertEquals(0, v1.getAnimal().size());
 		
-		c1.anadiAnimal(a1);
-		c1.anadiAnimal(a2);
+		v1.anadiAnimal(a1);
+		v1.anadiAnimal(a2);
 		
-		assertEquals(2, c1.getAnimal().size());
-		assertEquals(0, c1.getAnimal().indexOf(a1));
-		assertEquals(1, c1.getAnimal().indexOf(a2));
+		assertEquals(2, v1.getAnimal().size());
+		assertEquals(0, v1.getAnimal().indexOf(a1));
+		assertEquals(1, v1.getAnimal().indexOf(a2));
 		
-		c1.eliminarAnimal(a1);
-		assertEquals(1, c1.getAnimal().size());
-		assertEquals(0, c1.getAnimal().indexOf(a2));
+		v1.eliminarAnimal(a1);
+		assertEquals(1, v1.getAnimal().size());
+		assertEquals(0, v1.getAnimal().indexOf(a2));
 		
-		c1.eliminarAnimal(a2);
-		assertEquals(0, c1.getAnimal().size());
+		v1.eliminarAnimal(a2);
+		assertEquals(0, v1.getAnimal().size());
 		
 		}
 
@@ -84,35 +85,35 @@ public class MiVeterinariaTest extends TestCase {
 			
 			anadirItems();
 			
-			assertTrue("El animal no se añadio correctamente", c1.checkOut(a1,t1));
+			assertTrue("El animal no se añadio correctamente", v1.checkOut(a1,t1));
 			
 			assertEquals("Pepe", a1.getTrabajador().getNombre());
 			
-			assertFalse("Animal ya añadido", c1.checkOut(a1,t2));
+			assertFalse("Animal ya añadido", v1.checkOut(a1,t2));
 			
-			assertTrue("Fallo al añadir el animal", c1.checkIn(a1));
+			assertTrue("Fallo al añadir el animal", v1.checkIn(a1));
 			
-			assertFalse("El animal ya ha sido añadido en", c1.checkIn(a1));
+			assertFalse("El animal ya ha sido añadido en", v1.checkIn(a1));
 			
-			assertFalse("Animal nunca añadido", c1.checkIn(a2));
+			assertFalse("Animal nunca añadido", v1.checkIn(a2));
 			
 			//test adicionales
 			confi();
 			t1.setMaximoAnimales(1);
 			anadirItems();
 			
-			assertTrue("Primer animal no visto", c1.checkOut(a2, t1));
-			assertFalse("Segundo animal no visto", c1.checkOut(a1, t1));
+			assertTrue("Primer animal no visto", v1.checkOut(a2, t1));
+			assertFalse("Segundo animal no visto", v1.checkOut(a1, t1));
 		}
 
 		/**
 		 * test para anadirItems
 		 */
 		private void anadirItems() {
-			c1.anadiAnimal(a1);
-			c1.anadiAnimal(a2);
-			c1.anadirtrabajador(t1);
-			c1.anadirtrabajador(t2);
+			v1.anadiAnimal(a1);
+			v1.anadiAnimal(a2);
+			v1.anadirtrabajador(t1);
+			v1.anadirtrabajador(t2);
 		}
 		
 		/**
@@ -121,16 +122,16 @@ public class MiVeterinariaTest extends TestCase {
 		public void testGetAnimalesDeTrabajadores() {
 			confi();
 			anadirItems();
-			assertEquals(0, c1.getAnimalesDeTrabajadores(t1).size());
+			assertEquals(0, v1.getAnimalesDeTrabajadores(t1).size());
 			
-			c1.checkOut(a1, t1);
+			v1.checkOut(a1, t1);
 			
-			ArrayList<Animal> testAnimales = c1.getAnimalesDeTrabajadores(t1);
+			ArrayList<Animal> testAnimales = v1.getAnimalesDeTrabajadores(t1);
 			assertEquals(1, testAnimales.size());
 			assertEquals(0, testAnimales.indexOf(a1));
 			
-			c1.checkOut(a2, t1);
-			testAnimales = c1.getAnimalesDeTrabajadores(t1);
+			v1.checkOut(a2, t1);
+			testAnimales = v1.getAnimalesDeTrabajadores(t1);
 			assertEquals(2, testAnimales.size());
 			assertEquals(1, testAnimales.indexOf(a2));
 			
@@ -142,17 +143,17 @@ public class MiVeterinariaTest extends TestCase {
 		public void testGetAnimalesDisponibles() {
 			confi();
 			anadirItems();
-			ArrayList<Animal> testAnimales = c1.getAnimalesDisponibles();
+			ArrayList<Animal> testAnimales = v1.getAnimalesDisponibles();
 			assertEquals(2, testAnimales.size());
 			assertEquals(1, testAnimales.indexOf(a2));
 			
-			c1.checkOut(a1, t1);
-			testAnimales = c1.getAnimalesDisponibles();
+			v1.checkOut(a1, t1);
+			testAnimales = v1.getAnimalesDisponibles();
 			assertEquals(1, testAnimales.size());
 			assertEquals(0, testAnimales.indexOf(a2));
 			
-			c1.checkOut(a2, t1);
-			testAnimales = c1.getAnimalesDisponibles();
+			v1.checkOut(a2, t1);
+			testAnimales = v1.getAnimalesDisponibles();
 			assertEquals(0, testAnimales.size());
 		}
 		
@@ -162,16 +163,16 @@ public class MiVeterinariaTest extends TestCase {
 		public void testGetNoDisponibles() {
 			confi();
 			anadirItems();
-			assertEquals(0, c1.getNoDisponibles().size());
+			assertEquals(0, v1.getNoDisponibles().size());
 			
-			c1.checkOut(a1, t1);
+			v1.checkOut(a1, t1);
 
-			ArrayList<Animal> testAnimales = c1.getNoDisponibles();
+			ArrayList<Animal> testAnimales = v1.getNoDisponibles();
 			assertEquals(1, testAnimales.size());
 			assertEquals(0, testAnimales.indexOf(a1));
 			
-			c1.checkOut(a2, t1);
-			testAnimales = c1.getNoDisponibles();
+			v1.checkOut(a2, t1);
+			testAnimales = v1.getNoDisponibles();
 			assertEquals(2, testAnimales.size());
 			assertEquals(1, testAnimales.indexOf(a2));
 		}
@@ -182,7 +183,7 @@ public class MiVeterinariaTest extends TestCase {
 		public void testToString() {
 			confi();
 			anadirItems();
-			assertEquals("Veterinaria: 2 animales; 2 trabajador.", c1.toString());
+			assertEquals("Veterinaria: 2 animales; 2 trabajador.", v1.toString());
 		}
 		
 
