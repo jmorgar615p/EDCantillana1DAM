@@ -92,6 +92,7 @@ public class miInstitutoTest extends TestCase {
 			//prueba adicional para alumnos máximos
 			setup();
 			m1.setMaximoAlumnos(1);
+			
 			anadirItems();
 		
 			assertTrue("El primer alumno no se expulsó", mI.expulsado(a2,m1));
@@ -104,7 +105,8 @@ public class miInstitutoTest extends TestCase {
 			mI.anadirMaestro(m1);
 			mI.anadirMaestro(m2);
 		}
-		
+
+	
 		public void testGetAlumnosPorMaestro() {
 			setup();
 			anadirItems();
